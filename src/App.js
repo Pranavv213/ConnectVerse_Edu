@@ -8,7 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function App() {
   return (
-<div style={{backgroundColor:'black'}}>
+<div style={{backgroundColor:'black', fontFamily: 'Comic Sans MS,sans-serif'}}>
    
     <Router>
     <Routes>

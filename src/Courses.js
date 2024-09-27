@@ -45,31 +45,7 @@ function Courses() {
                 <br></br>
 <div class="courses">
 
-<Card style={{ width: '18rem', background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent white
-    backdropFilter: 'blur(10px)', // Blur effect
-    borderRadius: '10px', // Optional: rounded corners
-    border: '1px solid rgba(255, 255, 255, 0.2)', color:'white'  }}>
-    <center>
-      <Card.Img variant="top" style={{ width: '11rem', height:'11rem', padding:'2em' }} src={basicsofweb3} />
-      </center>
-      <Card.Body>
-        
-       <center>
-       <Card.Title>Basics of Web 3</Card.Title>
-       <br></br>
-        <button className="button-85" onClick={async ()=>{
-           const data = await getDocs(userCollection);
-     
-           let dbdata= data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-             let userDoc = doc(db, "user", localStorage.getItem('userId'));
-             let newFields = { username:localStorage.getItem('userName'),otp:dbdata[localStorage.getItem('userNum')].otp,friends:[...dbdata[localStorage.getItem('userNum')].friends],coins:dbdata[localStorage.getItem('userNum')].coins+25000,highscore:0 };
-             await updateDoc(userDoc, newFields);
-             localStorage.setItem('coins',parseInt(localStorage.getItem('coins'))+25000)
-             window.location.reload()
-        }}>Enroll</button>
-        </center>
-      </Card.Body>
-    </Card>
+
     <Card style={{ width: '18rem', background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent white
     backdropFilter: 'blur(10px)', // Blur effect
     borderRadius: '10px', // Optional: rounded corners
@@ -82,7 +58,16 @@ function Courses() {
         <center>
         <Card.Title>Ethereum Development</Card.Title>
         <br></br>
-        <button onClick={notify} className="button-85">Enroll</button>
+        <button onClick={async ()=>{
+           const data = await getDocs(userCollection);
+     
+           let dbdata= data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+             let userDoc = doc(db, "user", localStorage.getItem('userId'));
+             let newFields = { username:localStorage.getItem('userName'),otp:dbdata[localStorage.getItem('userNum')].otp,friends:[...dbdata[localStorage.getItem('userNum')].friends],coins:dbdata[localStorage.getItem('userNum')].coins+25000,highscore:0 };
+             await updateDoc(userDoc, newFields);
+             localStorage.setItem('coins',parseInt(localStorage.getItem('coins'))+25000)
+             window.location.reload()
+        }} className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
