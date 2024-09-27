@@ -10,6 +10,7 @@ import polygon from './assets/polygon.svg'
 import cosmos from './assets/cosmos.svg'
 import avax from './assets/avax.svg'
 import Form from 'react-bootstrap/Form';
+import { ToastContainer, toast } from 'react-toastify';
 import { db } from "./firebase-config.js";
 import {
   collection,
@@ -22,7 +23,9 @@ import {
 
 const userCollection = collection(db, "user");
 
+
 function Courses() {
+  const notify = () => toast("Coming Soon !");
   return (
     <div>
         <center>
@@ -53,6 +56,7 @@ function Courses() {
         
        <center>
        <Card.Title>Basics of Web 3</Card.Title>
+       <br></br>
         <button className="button-85" onClick={async ()=>{
            const data = await getDocs(userCollection);
      
@@ -77,7 +81,8 @@ function Courses() {
        
         <center>
         <Card.Title>Ethereum Development</Card.Title>
-        <button className="button-85">Enroll</button>
+        <br></br>
+        <button onClick={notify} className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -93,7 +98,8 @@ function Courses() {
        
         <center>
         <Card.Title>Solana Development</Card.Title>
-        <button className="button-85">Enroll</button>
+        <br></br>
+        <button onClick={notify} className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -110,7 +116,8 @@ function Courses() {
        
         <center>
         <Card.Title>Polygon Development</Card.Title>
-        <button className="button-85">Enroll</button>
+        <br></br>
+        <button onClick={notify} className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -125,7 +132,8 @@ function Courses() {
        
         <center>
         <Card.Title>Cosmos Development</Card.Title>
-        <button className="button-85">Enroll</button>
+        <br></br>
+        <button onClick={notify} className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -141,13 +149,24 @@ function Courses() {
        
         <center>
         <Card.Title>Avalanche Development</Card.Title>
-        <button className="button-85">Enroll</button>
+        <br></br>
+        <button onClick={notify} className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
 
     </div>
+    <ToastContainer position="top-center" autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
 
+/>
     </div>
     
   )
