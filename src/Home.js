@@ -9,6 +9,8 @@ import courses from './assets/courses.svg'
 import job from './assets/job.svg'
 import friend from './assets/friend.svg'
 import coin_airdrop from './assets/coin_airdrop.svg'
+import boy from './assets/boy.svg'
+import chat from './assets/chat.svg'
 
 function Home() {
 
@@ -16,9 +18,13 @@ function Home() {
     const notify = () => toast("Coming Soon !");
   return (
     <div>
-
+      <br></br>
+&nbsp;&nbsp;<img style={{width:'60px'}} src={boy}></img> <span style={{color:'white'}}><b>{localStorage.getItem('userName')}</b></span>
     <br></br><br></br><br></br>
-    <center><h2 style={{color:'white'}}><img style={{width:'5em'}} src={coin}></img>{localStorage.getItem('coins')?localStorage.getItem('coins'):0}</h2></center>
+    <img src={chat} style={{position: 'fixed', bottom: '90px', right: '10px', padding: '10px',width:'5em' }}/>
+       
+
+    <center><h2 style={{color:'white'}}><img style={{width:'70px'}} src={coin}></img>{localStorage.getItem('coins')?localStorage.getItem('coins'):0}</h2></center>
     <br></br>
     <Courses/>
     <ToastContainer position="top-center" autoClose={5000}
