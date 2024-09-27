@@ -13,6 +13,9 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
+import Form from 'react-bootstrap/Form';
+import connectverse from './assets/connectverse.avif'
+import './Courses.css'
 
 const userCollection = collection(db, "user");
 
@@ -88,26 +91,33 @@ function Auth_Referral() {
 
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:'black'}}>
       <br></br><br></br><br></br><br></br><br></br><br></br>
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br>
 
-      
-<div >
+      <center>
+<div style={{
+    border: '2px solid purple', // thickness and color
+   width:'83%',
+   height:'25em'
+    
+  }}>
   <div >
-    <h2>Register</h2>
+    <br></br><br></br>
+    <img style={{width:'10em'}} src={connectverse}></img>
    
     <br />
     <br />
-    <input type="text" placeholder="Telegram username" onChange={(e)=>{
+   
+    <input type="text" style={{width:'70%',height:'2em',border:'3px solid purple',borderRadius:'5px' }} placeholder="Telegram username" onChange={(e)=>{
       setUsername(e.target.value)
      }}/>
-     <br></br>
-    <input type="password" placeholder="Code sent on BeraBuck Bot" onChange={(e)=>{
+   <br></br> <br></br>
+    <input style={{width:'70%',height:'2em',border:'3px solid purple',borderRadius:'5px' }}type="password" placeholder="Code sent on ConnectVerse Bot" onChange={(e)=>{
       setCode(e.target.value)
      }}/>
-<br></br>
-    <input type="text" placeholder="Referral Code ( Optional )" onChange={(e)=>{
+<br></br><br></br>
+    <input style={{width:'70%',height:'2em',border:'3px solid purple',borderRadius:'5px' }}type="text" placeholder="Referral Code ( Optional )" onChange={(e)=>{
       setReferralC(e.target.value)
      }}/>
      <center>
@@ -117,9 +127,9 @@ function Auth_Referral() {
       </i>
     </center>
     <br />
-    <br />
+  
 
-    <button onClick={async()=>{
+    <button className="button-85" onClick={async()=>{
        const data = await getDocs(userCollection);
      
        let dbdata= data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
@@ -189,7 +199,7 @@ function Auth_Referral() {
           }
              
      }}>Let's Go</button>
-     <br></br>
+     <br></br><br></br><br></br>
      {msg}
   </div>
 </div>
@@ -202,7 +212,7 @@ function Auth_Referral() {
    {msg}
      <br></br>
      <br></br>
-     
+     </center>
     </div>
   );
 }

@@ -50,7 +50,7 @@ function Courses() {
         
        <center>
        <Card.Title>Basics of Web 3</Card.Title>
-        <Button variant="primary" onClick={async ()=>{
+        <button className="button-85" onClick={async ()=>{
            const data = await getDocs(userCollection);
      
            let dbdata= data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
@@ -59,7 +59,7 @@ function Courses() {
              await updateDoc(userDoc, newFields);
              localStorage.setItem('coins',parseInt(localStorage.getItem('coins'))+25000)
              window.location.reload()
-        }}>Enroll</Button>
+        }}>Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -74,7 +74,7 @@ function Courses() {
        
         <center>
         <Card.Title>Ethereum Development</Card.Title>
-        <Button variant="primary">Enroll</Button>
+        <button className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -90,7 +90,7 @@ function Courses() {
        
         <center>
         <Card.Title>Solana Development</Card.Title>
-        <Button variant="primary">Enroll</Button>
+        <button className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -107,7 +107,7 @@ function Courses() {
        
         <center>
         <Card.Title>Polygon Development</Card.Title>
-        <Button variant="primary">Enroll</Button>
+        <button className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -122,7 +122,7 @@ function Courses() {
        
         <center>
         <Card.Title>Cosmos Development</Card.Title>
-        <Button variant="primary">Enroll</Button>
+        <button className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
@@ -138,7 +138,7 @@ function Courses() {
        
         <center>
         <Card.Title>Avalanche Development</Card.Title>
-        <Button variant="primary">Enroll</Button>
+        <button className="button-85">Enroll</button>
         </center>
       </Card.Body>
     </Card>
