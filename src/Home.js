@@ -16,9 +16,7 @@ function Home() {
       <Nav.Item>
         <Nav.Link href="/home">Courses</Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link onClick={notify}>Bounties</Nav.Link>
-      </Nav.Item>
+     
       <Nav.Item>
         <Nav.Link onClick={notify}>Jobs</Nav.Link>
       </Nav.Item>
