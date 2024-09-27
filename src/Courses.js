@@ -27,14 +27,17 @@ function Courses() {
     <div>
         <center>
   <Form className="d-flex">
+  &nbsp;&nbsp;&nbsp;&nbsp;
                   <Form.Control
                     type="search"
                     placeholder="Search Courses"
                     className="me-2"
                     aria-label="Search"
                   />
-                 
+                   <Button variant="outline-success">Search</Button>
+                   &nbsp;&nbsp;
                 </Form>
+              
                 </center>
                 <br></br>
 <div class="courses">
