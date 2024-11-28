@@ -133,7 +133,7 @@ const config = {
 <br></br>
 <div style={{width:'100%',backgroundColor:'violet',color:'white'}}>
 
-<img style={{width:'2em'}} src={okto}></img> Learn through the Course and get Airdrops <img style={{width:'2em'}} src={coin_airdrop}></img> every month based on performance !
+<img style={{width:'2em'}} src={okto}></img> Learn through the Courses and get Airdrops <img style={{width:'2em'}} src={coin_airdrop}></img> every month based on performance !
 
 </div>
 {/* <Nav >
