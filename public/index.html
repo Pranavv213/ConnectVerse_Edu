@@ -10,6 +10,8 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -33,6 +35,20 @@
     <title>React App</title>
   </head>
   <body style="background-color: black; " >
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "dKPjWH2ngM-yLWxO0iOb4",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="dKPjWH2ngM-yLWxO0iOb4"
+      domain="www.chatbase.co"
+      defer>
+      </script>
     
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div  id="root"></div>

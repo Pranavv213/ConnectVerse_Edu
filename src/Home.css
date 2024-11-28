@@ -1,0 +1,10 @@
+.hello{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+}
