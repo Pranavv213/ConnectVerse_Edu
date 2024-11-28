@@ -16,6 +16,7 @@ import wallet from './assets/wallet.svg'
 import { useOkto } from "okto-sdk-react";
 import { GoogleLogin } from "@react-oauth/google";
 import './Home.css'
+import okto from './assets/okto.png'
 import Faq from "react-faq-component";
 
 
@@ -122,14 +123,19 @@ const config = {
   <div><img style={{width:'50px' }} src={boy}></img> <span style={{color:'white',fontSize: '24px'}}><b >{localStorage.getItem('userName')}</b></span></div>
 <div onClick={()=>{
   showWidgetModal()
-}}><img style={{width:'40px' }} src={wallet}></img> <span style={{color:'white',fontSize: '24px'}}>Wallet</span>
+}}><img style={{width:'60px' }} src={okto}></img> <span style={{color:'white',fontSize: '24px'}}>Wallet</span>
 
 
   </div>
 
 
 </div>
+<br></br>
+<div style={{width:'100%',backgroundColor:'violet',color:'white'}}>
 
+<img style={{width:'2em'}} src={okto}></img> Learn through the Course and get Airdrops <img style={{width:'2em'}} src={coin_airdrop}></img> every month based on performance !
+
+</div>
 {/* <Nav >
     <Nav.Item>
   
